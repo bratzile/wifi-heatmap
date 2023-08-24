@@ -35,7 +35,7 @@ function updatePolygon(polygon, entity) {
         fillColor: fillColor
     });
 
-    var tooltipContent = percentFilled.toFixed(0) + "%"; // Promenjeno toFixed(1) u toFixed(0)
+    var tooltipContent = percentFilled.toFixed(0) + "%"; 
     polygon.unbindTooltip().bindTooltip(tooltipContent, {
         permanent: true,
         direction: 'center',
@@ -61,7 +61,7 @@ $.getJSON("./json/api-2.json", function(jsonData) {
 var polygon = L.polygon(coordinates, { 
     color: '#fff', 
     weight: 3,
-    className: 'custom-polygon' // Dodajte ovu liniju
+    className: 'custom-polygon' 
 }).addTo(map);
 
 
@@ -139,7 +139,7 @@ function startInterval() {
 
 maxClients = Math.floor(Math.random() * (200 - 80)) + 50;
 
-        // Pomeri markere svake sekunde
+        // Check markers every second
         map.eachLayer(function (layer) {
             if (layer instanceof L.Marker) {
                 var xOffset = (Math.random() < 0.5 ? -1 : 1) * (Math.floor(Math.random() * 3) * 8 - 50);
